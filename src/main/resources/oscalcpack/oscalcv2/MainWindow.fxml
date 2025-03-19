@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <MenuBar>
+        <menus>
+            <Menu mnemonicParsing="false" text="Файл">
+                <items>
+                    <MenuItem disable="true" mnemonicParsing="false" text="Новая" />
+                    <MenuItem fx:id="MenuItemLoadOS" mnemonicParsing="false" text="Загрузить" />
+                    <MenuItem disable="true" mnemonicParsing="false" text="Сохранить" />
+                    <MenuItem disable="true" mnemonicParsing="false" text="Сохранить как" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Система">
+                <items>
+                    <MenuItem fx:id="MenuItemGeneralParameters" disable="false" mnemonicParsing="false" text="Редактор основных параметров" />
+                    <MenuItem fx:id="MenuItemFields" disable="false" mnemonicParsing="false" text="Редактор полей зрения" />
+                    <MenuItem fx:id="MenuItemWavelengths" disable="false" mnemonicParsing="false" text="Редактор длин волн" />
+                    <MenuItem fx:id="MenuItemSurfaces" disable="false" mnemonicParsing="false" text="Редактор поверхностей" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Расчет">
+                <items>
+                    <MenuItem fx:id="MenuItemCardinalPoints" disable="true" mnemonicParsing="false" text="Кардинальные точки" />
+                    <MenuItem fx:id="MenuItemRayFanAbberations" disable="true" mnemonicParsing="false" text="Аберрации пучка" />
+                    <MenuItem fx:id="MenuItemShowParam" disable="false" mnemonicParsing="false" text="Показать параметры ОС" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <TextArea fx:id="textArea1" editable="false" prefHeight="600.0" prefWidth="1200.0" scrollTop="1.0" wrapText="true">
+        <font>
+            <Font name="Consolas" size="14.0" />
+        </font>
+    </TextArea>
+
+    <HBox prefHeight="24.0">
+        <children>
+            <Label fx:id="StatusLabel1" text="Status" />
+            <Pane prefWidth="800.0" />
+            <Label fx:id="StatusLabel2" text="Status" textAlignment="RIGHT" />
+        </children>
+    </HBox>
+</VBox>
